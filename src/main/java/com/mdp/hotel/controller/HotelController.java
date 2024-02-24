@@ -15,7 +15,7 @@ public class HotelController {
     @Autowired
     HotelService hotelService;
     @GetMapping("/hotels/{id}")
-    public ResponseEntity<Hotel> getHotel(@RequestParam String id){
+    public ResponseEntity<Hotel> getHotel(@PathVariable String id){
         return ResponseEntity.status(HttpStatus.OK).body(hotelService.getHotel(id));
     }
 
